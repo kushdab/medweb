@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quality Modern Hospital</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            background-color: #0288d1;
+            color: #fff;
+            padding: 30px;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .sidebar nav a:hover {
+            color: #ffca28;
+        }
+
+        /* Content Wrapper */
+        .content {
+            margin-left: 250px;
+            flex: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #ffca28;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #fff;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #0288d1;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            padding: 40px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #ffca28;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card img {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #ffca28;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .services {
+                padding: 50px 20px;
+            }
+
+            .contact {
+                padding: 50px 20px;
+            }
+
+            .sidebar {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h1>Quality Modern Hospital</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Your Health, Our Priority</h1>
+                <p>Providing High-Quality Medical Care for You and Your Family</p>
+                <a href="#services" class="cta-btn">Explore Services</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <!-- General Medicine Card -->
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png" alt="General Medicine Icon">
+                    <h3>General Medicine</h3>
+                    <p>Our experienced physicians are here to diagnose and treat a wide range of general health conditions.</p>
+                </div>
+
+                <!-- Pediatrics Card -->
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2785/2785830.png" alt="Pediatrics Icon">
+                    <h3>Pediatrics</h3>
+                    <p>We provide specialized care for children, ensuring their health and development are well managed.</p>
+                </div>
+
+                <!-- Surgery Card -->
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2785/2785824.png" alt="Surgery Icon">
+                    <h3>Surgery</h3>
+                    <p>Our skilled surgeons offer both minor and major surgeries with the latest technology for the best outcomes.</p>
+                </div>
+
+                <!-- Maternity Care Card -->
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2785/2785825.png" alt="Maternity Icon">
+                    <h3>Maternity Care</h3>
+                    <p>From prenatal to postnatal care, we ensure both mother and baby receive the highest level of care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Phone: <a href="tel:+123456789">+123456789</a></p>
+            <p>Email: <a href="mailto:info@qualitymodernhospital.com">info@qualitymodernhospital.com</a></p>
+            <p>Address: 123 Health St, Nairobi, Kenya</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+       
